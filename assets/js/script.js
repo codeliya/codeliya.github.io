@@ -32,7 +32,7 @@ if (savedTheme) {
 // Ensure that the function runs only after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     GetUserPref(); // Call the function after the DOM is fully loaded 
-}
+});
 // Add event listeners to theme options
 themeOptions.forEach(option => {
     option.addEventListener("click", e => {
