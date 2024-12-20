@@ -1,3 +1,4 @@
+      function GetUserPref() {
      var user_pref = localStorage.getItem("selectedTheme");
      if(user_pref == null) {
        var user_pref = "yah user default theme ka upyog krta hai";
@@ -5,6 +6,7 @@
      }
     var hidden_input = document.getElementById("hidden_input");
     hidden_input.value = user_pref;
+      }
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // To Stop Default Form Submission
     const formData = new FormData(this); // Collec The Form Data
@@ -99,6 +101,7 @@ const defaultTheme = "./assets/css/default-style.css";
 const savedTheme = localStorage.getItem("selectedTheme");
 if (savedTheme) {
     themeStylesheet.href = savedTheme; // Apply saved theme
+    GetUserPref();
 
     // Add active class to the saved theme option
     themeOptions.forEach(option => {
@@ -110,6 +113,7 @@ if (savedTheme) {
     });
 } else {
     themeStylesheet.href = defaultTheme; // Apply default theme
+    GetUserPref();
 }
 
 // Add event listeners to theme options
