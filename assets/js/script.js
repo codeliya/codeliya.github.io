@@ -101,7 +101,6 @@ const defaultTheme = "./assets/css/default-style.css";
 const savedTheme = localStorage.getItem("selectedTheme");
 if (savedTheme) {
     themeStylesheet.href = savedTheme; // Apply saved theme
-    GetUserPref();
 
     // Add active class to the saved theme option
     themeOptions.forEach(option => {
@@ -113,7 +112,6 @@ if (savedTheme) {
     });
 } else {
     themeStylesheet.href = defaultTheme; // Apply default theme
-    GetUserPref();
 }
 
 // Add event listeners to theme options
@@ -132,7 +130,7 @@ themeOptions.forEach(option => {
         }
     });
 });
-
+function GetUserPref();
 document.addEventListener("DOMContentLoaded", function () {
     // Set a delay of 5 seconds before executing the replacement
     setTimeout(function () {
