@@ -20,24 +20,53 @@
         </script>
     </head>
     <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-      body {
-        background: #273443;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-      }
-      .info-div {
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #273443;
+            position: fixed;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .info-div {
+            text-align: center;
+            padding: 20px;
+            border: none; /* Optional: Add border for better visibility */
+            border-radius: 8px; /* Optional: Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+            background-color: white;
+        }
+        .info-div img {
+          width: 50px;
+          height: 50px;
+          display: block;
+          margin: 0 auto 10px;
+        }
+        .info-div h2 {
+          padding: 10px;
+        }
+        .info-div p {
+          padding: 10px;
+        }
+        .info-div strong {
+          padding: 10px;
+        }
     </style>
     <body>
-      <div class="info-div">
-        <h2>Hello, Visitors</h2>
-        <p>The website is down for its monthly maintenance.<br><strong>Sorry for the inconvenience.</strong></p>
-      </div>
+        <div class="info-div">
+          <img src="./assets/img/maintenance.png" alt="maintenance_image" >
+            <h2>Hello, Visitors</h2>
+            <p>
+                The website is down for its monthly maintenance.</p><strong
+                    >Sorry for the inconvenience.</strong
+                >
+            
+        </div>
     </body>
 </html>
