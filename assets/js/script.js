@@ -2,7 +2,11 @@
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // To Stop Default Form Submission
     const formData = new FormData(this); // Collec The Form Data
-
+    // Track form submission event in Google Analytics
+    gtag('event', 'submit', {
+        'event_category': 'Form',
+        'event_label': 'Contact Form Submission'
+    });
     // Structure Of Shimmer Loader
     const loader = `
         <div class="text-center shimmer-loader">
@@ -12,11 +16,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
         </div>`;
     document.getElementById("contactForm").innerHTML = loader; // Replace The Form From The Loader
 
-     // Track form submission event in Google Analytics
-    gtag('event', 'submit', {
-        'event_category': 'Form',
-        'event_label': 'Contact Form Submission'
-    });
+     
 
     // AJAX request to FormSubmit.co
     fetch("https://formsubmit.co/ajax/skingshopping@gmail.com", {
