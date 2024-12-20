@@ -26,7 +26,7 @@
             box-sizing: border-box;
         }
         body {
-            background: #273443;
+            background: rgba(39, 52, 68, 0.2);
             position: fixed;
             margin: 20px;
             display: flex;
@@ -39,34 +39,47 @@
             padding: 20px;
             border: none; /* Optional: Add border for better visibility */
             border-radius: 8px; /* Optional: Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
-            background-color: white;
+            box-shadow:
+                rgba(0, 0, 0, 0.4) 0px 2px 4px,
+                rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+                rgba(0, 0, 0, 0.2) 0px -3px 0px inset; /* Optional: Add shadow */
+                background: #fff;
+            animation: float 4s ease-in-out infinite; /* Floating animation */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
         .info-div img {
-          width: 50px;
-          height: 50px;
-          display: block;
-          margin: 0 auto 10px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 0 auto 10px;
         }
         .info-div h2 {
-          padding: 10px;
+            padding: 10px;
         }
         .info-div p {
-          padding: 10px;
+            padding: 10px;
         }
         .info-div strong {
-          padding: 10px;
+            padding: 10px;
         }
     </style>
     <body>
+      <div class="water"></div>
         <div class="info-div">
-          <img src="./assets/img/maintainance.png" alt="maintainance_image" >
+            <img src="./assets/img/maintainance.png" alt="maintainance_image" />
             <h2>Hello, Visitors</h2>
-            <p>
-                The website is down for its monthly maintenance.</p><strong
-                    >Sorry for the inconvenience.</strong
-                >
-            
+            <p>The website is down for its monthly maintenance.</p>
+            <strong>Sorry for the inconvenience.</strong>
         </div>
     </body>
 </html>
