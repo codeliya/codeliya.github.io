@@ -25,7 +25,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     });
 
     // AJAX request to FormSubmit.co
-    fetch("https://formsubmit.co/ajax/skingshopping@gmail.com", {
+    fetch("https://formsubmit.co/ajax/0f43a73c65e7f5dba4a25c0b67292850", {
         method: "POST",
         body: formData
     })
