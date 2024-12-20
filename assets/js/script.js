@@ -7,6 +7,45 @@
     var hidden_input = document.getElementById("hidden_input");
     hidden_input.value = user_pref;
       }
+      
+   // Select all theme option links
+const themeOptions = document.querySelectorAll(".theme-option");
+const themeStylesheet = document.getElementById("theme-stylesheet");
+// Default theme file (Set your default CSS file path here)
+const defaultTheme = "./assets/css/default-style.css";
+// Check for saved theme in localStorage
+const savedTheme = localStorage.getItem("selectedTheme");
+if (savedTheme) {
+    themeStylesheet.href = savedTheme; // Apply saved theme
+
+    // Add active class to the saved theme option
+    themeOptions.forEach(option => {
+        if (option.getAttribute("data-theme") === savedTheme) {
+            option.classList.add("active");
+        } else {
+            option.classList.remove("active");
+        }
+    });
+} else {
+    themeStylesheet.href = defaultTheme; // Apply default theme
+}
+function GetUserPref();
+// Add event listeners to theme options
+themeOptions.forEach(option => {
+    option.addEventListener("click", e => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const selectedTheme = e.target.getAttribute("data-theme"); // Get theme from data attribute
+
+        if (selectedTheme) {
+            themeStylesheet.href = selectedTheme; // Apply selected theme
+            localStorage.setItem("selectedTheme", selectedTheme); // Save theme to localStorage
+
+            // Update active class for the selected theme
+            themeOptions.forEach(opt => opt.classList.remove("active")); // Remove active from all
+            e.target.classList.add("active"); // Add active to selected option
+        }
+    });
+});
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // To Stop Default Form Submission
     const formData = new FormData(this); // Collec The Form Data
@@ -90,47 +129,6 @@ function showForm() {
         </div>
     `;
 }
-// Select all theme option links
-const themeOptions = document.querySelectorAll(".theme-option");
-const themeStylesheet = document.getElementById("theme-stylesheet");
-
-// Default theme file (Set your default CSS file path here)
-const defaultTheme = "./assets/css/default-style.css";
-
-// Check for saved theme in localStorage
-const savedTheme = localStorage.getItem("selectedTheme");
-if (savedTheme) {
-    themeStylesheet.href = savedTheme; // Apply saved theme
-
-    // Add active class to the saved theme option
-    themeOptions.forEach(option => {
-        if (option.getAttribute("data-theme") === savedTheme) {
-            option.classList.add("active");
-        } else {
-            option.classList.remove("active");
-        }
-    });
-} else {
-    themeStylesheet.href = defaultTheme; // Apply default theme
-}
-
-// Add event listeners to theme options
-themeOptions.forEach(option => {
-    option.addEventListener("click", e => {
-        e.preventDefault(); // Prevent default anchor behavior
-        const selectedTheme = e.target.getAttribute("data-theme"); // Get theme from data attribute
-
-        if (selectedTheme) {
-            themeStylesheet.href = selectedTheme; // Apply selected theme
-            localStorage.setItem("selectedTheme", selectedTheme); // Save theme to localStorage
-
-            // Update active class for the selected theme
-            themeOptions.forEach(opt => opt.classList.remove("active")); // Remove active from all
-            e.target.classList.add("active"); // Add active to selected option
-        }
-    });
-});
-function GetUserPref();
 document.addEventListener("DOMContentLoaded", function () {
     // Set a delay of 5 seconds before executing the replacement
     setTimeout(function () {
