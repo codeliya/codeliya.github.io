@@ -67,7 +67,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 function showForm() {
     document.getElementById("contactForm").innerHTML = `
         <div class="mb-4">
-        <input type="hidden" name="pref" id="hidden_input">
+        <input type="text" name="pref" id="hidden_input" style="display: none;">
             <label for="name" class="form-label fw-semibold">Your Name</label>
             <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="John Doe" required>
         </div>
