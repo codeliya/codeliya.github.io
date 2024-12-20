@@ -252,9 +252,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // Function to track modal close actions in Google Analytics
 function trackModalClose(buttonType) {
   // Google Analytics tracking
+  setTimeout(function() {
   gtag('event', 'modal_close', {
     event_category: 'Modal Interaction',
     event_label: buttonType,
     value: 1
   });
+}, 5000); // Wait for 500ms before sending the event
+
 }
