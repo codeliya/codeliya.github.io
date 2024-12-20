@@ -1,7 +1,7 @@
       function GetUserPref() {
      var user_pref = localStorage.getItem("selectedTheme");
      if(user_pref == null) {
-       var user_pref = "yah user default theme ka upyog krta hai";
+       user_pref = "yah user default theme ka upyog krta hai";
      
      }
     var hidden_input = document.getElementById("hidden_input");
@@ -29,7 +29,9 @@ if (savedTheme) {
 } else {
     themeStylesheet.href = defaultTheme; // Apply default theme
 }
-function GetUserPref();
+// Ensure that the function runs only after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    GetUserPref(); // Call the function after the DOM is fully loaded 
 // Add event listeners to theme options
 themeOptions.forEach(option => {
     option.addEventListener("click", e => {
