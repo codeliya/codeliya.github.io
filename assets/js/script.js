@@ -243,18 +243,3 @@ document.addEventListener("DOMContentLoaded", function () {
         changeColorById("hide-4");
     }, 5000); // Delay of 5 seconds
 });
-document.addEventListener('DOMContentLoaded', function () {
-  // Show modal on page load
-  const myModal = new bootstrap.Modal(document.getElementById('infoModal'));
-  myModal.show();
-});
-
-// Function to track modal close actions in Google Analytics
-function trackModalClose(buttonType) {
-  // Google Analytics tracking
-  gtag('event', 'modal_close', {
-    event_category: 'Modal Interaction',
-    event_label: buttonType,
-    value: 1
-  });
-}
