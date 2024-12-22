@@ -241,5 +241,5 @@ document.addEventListener("DOMContentLoaded", function () {
         changeColorById("hide-2");
         changeColorById("hide-3");
         changeColorById("hide-4");
-    }, 5000); // Delay of 5 seconds
+    }, 10000); // Delay of 10 seconds
 });
