@@ -47,7 +47,10 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link
             id="theme-stylesheet"
             href="assets/css/default-style.css"
@@ -57,56 +60,60 @@
         <title>
             Codeliya - Professional Website Development & Email Templates
         </title>
-         <!--Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X35N89PNGK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!--Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-X35N89PNGK"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-X35N89PNGK');
-</script>
+            gtag("config", "G-X35N89PNGK");
+        </script>
     </head>
     <style>
-/* Full-screen Loader */
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff; /* Background color */
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        /* Full-screen Loader */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff; /* Background color */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-/* Spinner Design */
-.spinner {
-  border: 8px solid #f9f5fe; /* Light grey */
-  border-top: 8px solid var(--dark); /* Blue */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
+        /* Spinner Design */
+        .spinner {
+            border: 8px solid #f9f5fe; /* Light grey */
+            border-top: 8px solid var(--dark); /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
 
-/* Spin Animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+        /* Spin Animation */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <body>
-<div id="loader">
-  <div class="spinner"></div>
-</div>
+        <div id="loader">
+            <div class="spinner"></div>
+        </div>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <!-- Logo or Brand Name -->
@@ -679,18 +686,18 @@
         </footer>
         <!-- Footer Section -->
         <script src="assets/js/script.js"></script>
-                <script>
-  window.addEventListener('load', function () {
-    const loader = document.getElementById('loader');
-    const content = document.getElementById('content');
+        <script>
+            window.addEventListener("load", function () {
+                const loader = document.getElementById("loader");
+                const content = document.getElementById("content");
 
-    // Ensure loader is visible for at least 5 seconds
-    setTimeout(() => {
-      loader.style.display = 'none'; // Hide the loader
-      content.style.display = 'block'; // Show the website content
-    }, 5000); // 5000ms = 5 seconds
-  });
-</script>
+                // Ensure loader is visible for at least 5 seconds
+                setTimeout(() => {
+                    loader.style.display = "none"; // Hide the loader
+                    content.style.display = "block"; // Show the website content
+                }, 5000); // 5000ms = 5 seconds
+            });
+        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script
