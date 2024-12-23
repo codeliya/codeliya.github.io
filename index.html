@@ -111,7 +111,8 @@
         }
     </style>
     <body>
-      <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer">
+        <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div class="toast align-items-center text-bg-primary border-0" id="myToast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body">
@@ -707,11 +708,22 @@
                     content.style.display = "block"; // Show the website content
                 }, 5000); // 5000ms = 5 seconds
             });
-            // Toast ko dikhane ka JavaScript code
-    document.addEventListener("DOMContentLoaded", function () {
+            document.addEventListener("DOMContentLoaded", function () {
+      // Toast element ko fetch karein
       var myToastEl = document.getElementById('myToast');
-      var myToast = new bootstrap.Toast(myToastEl);
-      myToast.show();
+      var myToast = new bootstrap.Toast(myToastEl, {
+        autohide: false // Toast ko manually hide karne ke liye
+      });
+
+      // Website load hone ke 3 second baad toast dikhana
+      setTimeout(function () {
+        myToast.show();
+        
+        // Toast ko 5 second ke baad hide karna
+        setTimeout(function () {
+          myToast.hide();
+        }, 5000); // 5 second
+      }, 5000); // 3 second
     });
         </script>
 
