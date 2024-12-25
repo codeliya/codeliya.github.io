@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Sign In</title>
+</head>
+<body>
+  <button id="github-login">Sign in with GitHub</button>
+  <div id="user-info"></div>
+
+  <script>
+    const clientID = "Ov23liVgzPss0JzmeIdT"; // Replace with your GitHub Client ID
+    const redirectURI = "https://codeliya.github.io/callback/"; // Callback URL
+
+    document.getElementById("github-login").addEventListener("click", () => {
+      // Redirect user to GitHub login page
+      const githubAuthURL = `https://github.com/login/oauth/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&scope=read:user user:email`;
+      window.location.href = githubAuthURL;
+    });
+
+    // Handle callback with code in URL
+    window.onload = async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get("code");
+
+      if (code) {
+        try {
+          // Exchange authorization code with access token
+          const tokenResponse = await fetch(
+            `https://github.com/login/oauth/access_token?client_id=${clientID}&client_secret=887ca43361f74fe1b0395b1e8bdae234891de375&code=${code}`,
+            {
+              method: "POST",
+              headers: {
+                Accept: "application/json",
+              },
+            }
+          );
+          const tokenData = await tokenResponse.json();
+          const accessToken = tokenData.access_token;
+
+          // Fetch user data with access token
+          const userResponse = await fetch("https://api.github.com/user", {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          });
+          const userData = await userResponse.json();
+
+          // Display user info
+          document.getElementById("user-info").innerHTML = `
+            <h3>Welcome, ${userData.login}</h3>
+            <img src="${userData.avatar_url}" alt="Avatar" width="100">
+            <p>GitHub URL: <a href="${userData.html_url}" target="_blank">${userData.html_url}</a></p>
+          `;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+    };
+  </script>
+</body>
+</html>
