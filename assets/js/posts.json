@@ -2,8 +2,8 @@
     {
         "@context": "https://schema.org",
         "@type": "TechArticle",
-        "mdescription": "Javascript based blog system",
-        "keywords": "blog,json,render, javascript",
+        "mdescription": "Javascript and JSON based blog website,It is designed for users who are new to coding.",
+        "keywords": "blog, json, render, javascript, new, coder , cost-effective solution",
         "id": 1,
         "title": "Blog System with JSON",
         "category": "Project",
