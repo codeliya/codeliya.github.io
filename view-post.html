@@ -5,14 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Default Meta Title (This will be updated dynamically) -->
-    <!-- Open Graph Meta Tags for Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yourwebsite.com/">
-<meta property="og:title" content="Your Website Title">
-<meta property="og:description" content="A brief description of your website.">
-<meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
-
-<
     <title>Codeliya The Programmers's Mentor</title>
     <!-- Default Meta Description (This will be updated dynamically) -->
     <meta name="description" content="Example Description" />
@@ -727,20 +719,6 @@
             console.error("Failed to copy text: ", error);
           });
       };
-      // Ek hi querySelectorAll ke zariye sare meta tags ko select karna
-const metaTags = document.querySelectorAll('meta[name], meta[property]');
-
-// Update karna meta tags ki value
-metaTags.forEach((meta) => {
-    if (meta.getAttribute('name') === 'description') {
-        meta.setAttribute('content', 'Yeh naya description hai!');
-    } else if (meta.getAttribute('property') === 'og:title') {
-        meta.setAttribute('content', 'Yeh naya OG title hai!');
-    } else if (meta.getAttribute('property') === 'og:description') {
-        meta.setAttribute('content', 'Yeh naya OG description hai!');
-    }
-});
-
     </script>
   </body>
 </html>
