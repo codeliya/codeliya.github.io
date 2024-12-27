@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /view-post.html$
+Allow: /post.html$
 Allow: /view-post.html?id=
