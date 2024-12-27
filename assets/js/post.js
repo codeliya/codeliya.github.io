@@ -94,7 +94,7 @@ fetch("./assets/js/posts.json")
                 footer.classList.add("card-footer","border-0");
                 // Add read more link
                 const readMoreElement = document.createElement("a");
-                readMoreElement.href = `http://localhost:8158/view-post.html?id=${post.id}`;
+                readMoreElement.href = `http://codeliya.github.io/view-post.html?id=${post.id}`;
                 readMoreElement.className = "btn btn-primary btn-sm";
                 readMoreElement.textContent = "Read More";
                 footer.appendChild(readMoreElement);
