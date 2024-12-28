@@ -65,7 +65,7 @@
 
       
       shareString +=" ने आपको एक 🤩 *मजेदार* संदेश भेजा है, इस खास *संदेश* ✉ को देखने के लिए नीचे दिये गए *ब्लू लाइन* को टच करके देखो%0A👇👇"
-      shareString +=(window.location.href.split("?")[0] + "?bl=" + sname).replace("#", "").replace(/ /g, "-");
+      shareString +=(window.location.href.split("?")[0] + "?sender=" + sname).replace("#", "").replace(/ /g, "-");
      
 
       whatsappHref = "whatsapp://send?text=" + shareString;
