@@ -1,4 +1,4 @@
-<script type="text/javascript">! function (){
+! function (){
  var t;
  try{for (t=0; 10 > t; ++t)
   history.pushState({}, "", "#");
