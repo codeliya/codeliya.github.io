@@ -10,14 +10,14 @@
           }
       };
     window.jqs = jqs;
-    var name = decodeURI(jqs("bl"));
-    if (typeof jqs("bl") === "undefined") {
+    var name = decodeURI(jqs("sender"));
+    if (typeof jqs("sender") === "undefined") {
       name = "";
     }
     var checkName = function() {
       if (name.length !== 0) {
         name = name.replace(/-/g, " ");
-        console.log("name is there", name);
+        // console.log("name is there", name);
         document.querySelector("#user_name").innerHTML = name;
         document.querySelector("#user_slide").innerHTML = name+" की तरफ से आपको और आपके परिवार को नववर्ष 2025 की हार्दिक शुभकामनायें !!";
         document.querySelector("#codeliya_it-show-name").innerHTML = name;
