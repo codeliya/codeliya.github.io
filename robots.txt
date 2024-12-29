@@ -1,4 +1,5 @@
 User-agent: *
+Sitemap: https://codeliya.github.io/sitemap.xml
 Disallow: /view-post.html$
 Disallow: /post.html$
 Allow: /view-post.html?id=
