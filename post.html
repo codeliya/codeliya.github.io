@@ -592,8 +592,6 @@ fetch('your-data.json')
 // Meta tags update karne ka function
 function updateMetaTags(post) {
   document.title = post.title;
-  document.querySelector('meta[name="og:title"]').setAttribute('content', post.title);
-  document.querySelector('meta[property="og:image"]').setAttribute('content', post.image);
   
   document.querySelector('meta[name="description"]').setAttribute('content', post.mdescription);
   
