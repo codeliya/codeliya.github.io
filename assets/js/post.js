@@ -29,6 +29,7 @@ fetch("./assets/js/posts.json")
                 imageElement.className = "card-img-top";
                 imageElement.src = post.image;
                 imageElement.alt = post.title;
+                imageElement.title = post.title;
                 imageElement.setAttribute("style","background: var(--dark);");
 
                 // Card body
