@@ -547,13 +547,6 @@ fetch('./assets/js/posts.json')
     if (metaAuthor) {
       metaAuthor.setAttribute('content', topPost.author);
     }
-
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', `https://codeliya.github.io/post-${topPost.id}.html`);
-    }
-
-    console.log("Meta tags updated for:", topPost.title);
   })
   .catch(error => console.error('Error fetching JSON:', error));
 
