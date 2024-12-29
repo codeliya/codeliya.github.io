@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get('id');
 
 // Fetch posts from JSON
-fetch('./assets/js/posts.json')
+fetch('./assets/js/posts.json?v=1.1')
   .then(response => response.json())
   .then(posts => {
     const blogContainer = document.getElementById('blog-container');
