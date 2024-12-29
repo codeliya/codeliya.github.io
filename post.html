@@ -570,6 +570,34 @@
                     });
             }
         </script>
+        <script>
+          // JSON se data fetch karna
+fetch('your-data.json')
+  .then(response => response.json())
+  .then(data => {
+    // Posts ko shares ke hisaab se sort karna
+    const sortedPosts = data.posts.sort((a, b) => b.shares - a.shares);
+
+    // Sabse zyada shares wali post
+    const topPost = sortedPosts[0];
+
+    // Meta tags ko update karna
+    updateMetaTags(topPost);
+
+    // Sabhi posts ko render karna
+    renderPosts(data.posts);
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
+
+// Meta tags update karne ka function
+function updateMetaTags(post) {
+  document.title = post.title;
+  document.querySelector('meta[name="description"]').setAttribute('content', post.mdescription);
+  document.querySelector('meta[name="keywords"]').setAttribute('content', post.keywords);
+  document.querySelector('meta[property="og:image"]').setAttribute('content', post.image);
+}
+
+        </script>
         <script src="./assets/js/post.js"></script>
         <script src="./assets/js/category.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
