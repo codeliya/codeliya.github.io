@@ -595,6 +595,7 @@ function updateMetaTags(post) {
   document.querySelector('meta[name="description"]').setAttribute('content', post.mdescription);
   document.querySelector('meta[name="keywords"]').setAttribute('content', post.keywords);
   document.querySelector('meta[property="og:image"]').setAttribute('content', post.image);
+  document.querySelector('meta[name="author"]').setAttribute('content', post.author);
   document.querySelector('link[rel="canonical"]').setAttribute('href', "https://codeliya.github.io/post.html");
 }
 
