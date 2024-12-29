@@ -532,19 +532,19 @@
 
       // Meta tags update function
       function updateMetaTags(post) {
-        document.title = post.title || "Default Title";
+        document.title = post.title || "Programmers Related Posts";
 
         document
           .querySelector('meta[name="description"]')
-          .setAttribute("content", post.mdescription || "Default Description");
+          .setAttribute("content", post.mdescription);
 
         document
           .querySelector('meta[name="keywords"]')
-          .setAttribute("content", post.keywords || "default,keywords");
+          .setAttribute("content", post.keywords);
 
         document
           .querySelector('meta[name="author"]')
-          .setAttribute("content", post.author || "Default Author");
+          .setAttribute("content", post.author);
 
         document
           .querySelector('link[rel="canonical"]')
