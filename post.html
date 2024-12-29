@@ -517,34 +517,46 @@
     <script src="./assets/js/category.js"></script>
     <script defer>
       // JSON se data fetch karna
-      fetch("./assets/js/posts.json")
-        .then(response => response.json())
-        .then(data => {
-          // Directly accessing the array and sorting it by "share_count"
-          const sortedPosts = data.sort((a, b) => {
-            const sharesA = parseInt(a.share_count.replace("K", "000")); // Convert "3.2K" to 3200
-            const sharesB = parseInt(b.share_count.replace("K", "000")); // Convert "2.5K" to 2500
-            return sharesB - sharesA;
-          });
+fetch('./assets/js/posts.json')
+  .then(response => response.json())
+  .then(data => {
+    // Sort posts based on share_count
+    const sortedPosts = data.sort((a, b) => {
+      const sharesA = parseInt(a.share_count.replace('K', '000'));
+      const sharesB = parseInt(b.share_count.replace('K', '000'));
+      return sharesB - sharesA;
+    });
 
-          // Get the top post with the highest shares
-          const topPost = sortedPosts[0];
+    // Top post with maximum shares
+    const topPost = sortedPosts[0]; // First post after sorting by shares
 
-          // Update meta tags
-          updateMetaTags(topPost);
-        })
-        .catch(error => console.error("Error fetching JSON:", error));
+    // Directly update meta tags for the top post
+    document.title = topPost.title;
 
-      // Meta tags update function
-      function updateMetaTags(post) {
-        document.title = post.title || "Programmers Related Posts";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', topPost.mdescription);
+    }
 
-        document.querySelector('meta[name="description"]').setAttribute("content", post.mdescription);
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', topPost.keywords);
+    }
 
-        document.querySelector('meta[name="keywords"]').setAttribute("content", post.keywords);
+    const metaAuthor = document.querySelector('meta[name="author"]');
+    if (metaAuthor) {
+      metaAuthor.setAttribute('content', topPost.author);
+    }
 
-        document.querySelector('meta[name="author"]').setAttribute("content", post.author);
-      }
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
+      canonicalLink.setAttribute('href', `https://codeliya.github.io/post-${topPost.id}.html`);
+    }
+
+    console.log("Meta tags updated for:", topPost.title);
+  })
+  .catch(error => console.error('Error fetching JSON:', error));
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
