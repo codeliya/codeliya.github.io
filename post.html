@@ -575,29 +575,48 @@
 fetch('./assets/js/posts.json')
   .then(response => response.json())
   .then(data => {
-    // Posts ko shares ke hisaab se sort karna
-    const sortedPosts = data.posts.sort((a, b) => b.shares - a.shares);
+    // Directly accessing the array and sorting it by "share_count"
+    const sortedPosts = data.sort((a, b) => {
+      const sharesA = parseInt(a.share_count.replace('K', '000')); // Convert "3.2K" to 3200
+      const sharesB = parseInt(b.share_count.replace('K', '000')); // Convert "2.5K" to 2500
+      return sharesB - sharesA;
+    });
 
-    // Sabse zyada shares wali post
+    // Get the top post with the highest shares
     const topPost = sortedPosts[0];
 
-    // Meta tags ko update karna
+    // Update meta tags
     updateMetaTags(topPost);
   })
   .catch(error => console.error('Error fetching JSON:', error));
 
-// Meta tags update karne ka function
+// Meta tags update function
 function updateMetaTags(post) {
-  document.title = post.title;
-  
-  document.querySelector('meta[name="description"]').setAttribute('content', post.mdescription);
-  
-  document.querySelector('meta[name="keywords"]').setAttribute('content', post.keywords);
-  
-  document.querySelector('meta[name="author"]').setAttribute('content', post.author);
-  
-  document.querySelector('link[rel="canonical"]').setAttribute('href', "https://codeliya.github.io/post.html");
+  document.title = post.title || "Default Title";
+
+  document.querySelector('meta[name="description"]').setAttribute(
+    'content',
+    post.mdescription || "Default Description"
+  );
+
+  document.querySelector('meta[name="keywords"]').setAttribute(
+    'content',
+    post.keywords || "default,keywords"
+  );
+
+  document.querySelector('meta[name="author"]').setAttribute(
+    'content',
+    post.author || "Default Author"
+  );
+
+  document.querySelector('link[rel="canonical"]').setAttribute(
+    'href',
+    `https://codeliya.github.io/post-${post.id}.html`
+  );
+
+  console.log("Meta tags updated for:", post.title);
 }
+
 
         </script>
         <script src="./assets/js/post.js"></script>
