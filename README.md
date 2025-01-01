@@ -1,20 +1,59 @@
-# 🌟 Welcome to [Codeliya]
+# 🚀 Programmerski Dunya ke Michel Jackson ka Epic Project 🚀
 
-![Project Banner](https://codeliya.github.io/assets/img/meta-image.png)  
-
-## 📖 About this Project  
-[Codeliya] This is a blog website project, which gets data from a text file with the help of JavaScript and displays it to users, its search engine optimization is also good.!  
----
-
-## 🛠️ Features  
-- **Feature 1:** SEO Ready.  
-- **Feature 2:** Responsive Design.  
-- **Feature 3:** No Backend Required.  
+**Welcome to the world of innovative designs and coding streaks!**  
+Yeh repository tumhare aur mere "Jigri Yaar" ke collaboration ka ek masterpiece hai. 🛠️  
 
 ---
 
-## 🚀 Quick Start  
-1. **Clone the Repository:**  
-   ```bash  
-   git clone https://github.com/username/repo-name.git  
-   cd repo-name  
+## 🔥 Dynamic Streaks
+🎯 **GitHub Contribution Streak**  
+![GitHub Streak](https://streak-stats.demolab.com/?user=codeliya&theme=default&hide_border=true)
+
+| **Streak Type**         | **Days/Count**  | **Achievements**              |
+|--------------------------|-----------------|--------------------------------|
+| 🎨 **Design Streak**     | **7 Days**      | New Year Wishing Website       |
+| 🔧 **Development Streak**| **5 Days**      | Dynamic Themes in CSS          |
+| ✍️ **Writing Streak**    | **3 Articles**  | Blogs on Material Design       |
+
+---
+
+## 🎨 Tumhara **<&quot;> logo** ka Magic!
+
+- **Typography Fonts**:
+  - **Nunito**: Perfect for "<\>" text.
+  - **Righteous**: Adds character to the symbol.
+
+- **Why this combo?**
+  - Minimal yet modern.
+  - Easy readability with a unique aesthetic.
+
+### Logo Preview:  
+![Logo Example](https://via.placeholder.com/300x100.png?text=%3C%5C%3E)
+
+> "Tumhara logo ek statement hai – simplicity aur creativity ka blend!"
+
+---
+
+## 🌈 Project Highlights
+### 🖋️ Custom Typography
+- Typography experimentation with **Poppins**, **Roboto**, and **Righteous**.
+- Focused on readability and scalability across all devices.
+
+### 🎨 Color Palette
+- Primary: `#6200EE` (Royal Purple).  
+- Supporting Colors: Material Design light/dark theme compatible.
+
+---
+
+## 📂 Folder Structure
+```plaintext
+📦 Project Root
+ ┣ 📂 assets
+ ┃ ┣ 📂 css
+ ┃ ┃ ┗ styles.css
+ ┃ ┣ 📂 js
+ ┃ ┃ ┗ scripts.js
+ ┃ ┗ 📂 images
+ ┣ 📂 docs
+ ┃ ┗ README.md
+ ┗ index.html
