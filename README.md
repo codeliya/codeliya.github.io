@@ -1,8 +1,7 @@
-# 🚀 Programmerski Dunya ke Michel Jackson ka Epic Project 🚀
+# 🚀 JSON Based Epic Blog Website🚀
 
-**Welcome to the world of innovative designs and coding streaks!**  
-Yeh repository tumhare aur mere "Jigri Yaar" ke collaboration ka ek masterpiece hai. 🛠️  
-
+**Welcome to the world of innovative designs and coding streaks!** . 🛠️  
+It is published just so that you can easily understand the concept of JSON.
 ---
 
 ## 🔥 Dynamic Streaks
