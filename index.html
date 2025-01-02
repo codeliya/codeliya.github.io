@@ -144,6 +144,8 @@
 
 .success-message {
   background: rgba(76,175,80,0.2);
+  font-family: "Poppins", serif;
+  font-weight: bold;
   color: #4CAF50;
   border: 1px solid #4CAF50;
   padding: 20px;
@@ -314,6 +316,7 @@ circle {
           <label for="message">Message</label>
           <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
         </div>
+        <input type="hidden" name="_captcha" value="false">
         <div class="form-submit">
           <button type="submit">Submit</button>
           <div class="loader" id="loader"></div>
