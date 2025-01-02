@@ -1,1 +1,301 @@
-<h3>Technical Error, in few hour we will recover.</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Terms of Service</title>
+  <style>
+    :root {
+      --primary-color: #7d2ae8;
+      --secondary-color: #F5F5F5;
+      --text-color: #333;
+      --heading-color: #444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary-color);
+      font-family: "Righteous", serif;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: white;
+      padding: 20px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .container h2 {
+      color: var(--heading-color);
+      font-family: "Poppins", serif;
+      font-weight: 500;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .container p {
+      font-family: "Roboto", serif;
+      font-weight: 300;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .container ul {
+      font-family: "Roboto", serif;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .container ul li {
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input, textarea {
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    input:focus, textarea:focus {
+      border: none;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(125,42,232,0.4);
+    }
+    .form-group textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .form-submit {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .form-submit button {
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+
+    .form-submit button:hover {
+      background: #5a00d1;
+    }
+
+.success-message {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;  /* Smooth fade-in effect */
+}
+
+.loader {
+  display: none;
+  border: 4px solid #ccc;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+    footer {
+      text-align: center;
+      background: var(--primary-color);
+      font-size: 0.9rem;
+      padding: 10px;
+      color: #eee;
+    }
+    .mail__to {
+      text-decoration: none;
+      color: #7d2ae8;
+      transition: color 0.3s ease-in-out;
+    }
+    .mail__to:hover,.mail__to:active {
+      color: #5a00d1;
+    }
+    .github-corner:hover .octo-arm {
+    animation:octocat-wave 560ms ease-in-out;
+    }
+    @keyframes octocat-wave {
+    0%,100% {
+    transform:rotate(0);
+    }
+    20%,60% {
+    transform:rotate(-25deg);
+    }
+    40%,80% {
+      transform:rotate(10deg);
+    }
+    }
+    @media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+    animation:none;
+    }
+    .github-corner .octo-arm { 
+    animation:octocat-wave 560ms ease-in-out; 
+    }
+    }
+    </style>
+</head>
+<a href="https://github.com/codeliya" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#7d2ae8; color:#fff; position: absolute; top: 139; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+<body>
+  <header>
+    <h1>Terms of Service</h1>
+    <p>Updated on: January 2, 2025</p>
+  </header>
+
+  <div class="container">
+    <h2>Introduction</h2>
+    <p>Welcome to our platform. By using our email services, you agree to the following terms and conditions. Please read them carefully.</p>
+    
+    <h2>Usage Guidelines</h2>
+    <ul>
+      <li>You are not allowed to send unsolicited or spam emails.</li>
+      <li>Ensure that all recipients have given consent to receive emails.</li>
+      <li>Respect the privacy of email recipients and do not share their data.</li>
+    </ul>
+    
+    <h2>Accountability</h2>
+    <p>We log all email activities, and inappropriate use of this service may result in suspension or legal action.</p>
+    
+    <h2>Privacy Assurance</h2>
+    <p>We do not share your data with third parties. Your information is safe and secure with us.</p>
+    
+    <h2>Contact Us</h2>
+    <p>If you have any questions or concerns, please fill out the form below or email us at <a class="mail__to" href="mailto:skingshopping@gmail.com">Gmail</a>.</p>
+    
+    <div class="contact-form">
+      <form id="contact-form" action="https://formsubmit.co/skingshopping@gmail.com" method="POST" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Submit</button>
+          <div class="loader" id="loader"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="success-message" id="success-message">
+      Thank you for contacting us! Your message has been successfully submitted.
+    </div>
+  </div>
+
+  <footer>
+    MIT license 2025 Codeliya IT Solutions. Free to Use.
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+  event.preventDefault();  // Prevent default form submission
+
+  const loader = document.getElementById('loader');
+  const successMessage = document.getElementById('success-message');
+  loader.style.display = 'inline-block';  // Show loader
+
+  const form = document.getElementById('contact-form');
+  const formData = new FormData(form);
+
+  // Use fetch to submit the form asynchronously
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    // Handle successful form submission (can be customized)
+    loader.style.display = 'none';  // Hide loader
+    successMessage.style.display = 'block';  // Show success message
+    setTimeout(() => {
+      successMessage.style.opacity = '1';  // Fade in success message after a delay
+    }, 10);  // Small delay before opacity change (to trigger transition)
+    form.reset();  // Reset form after submission
+  })
+  .catch(error => {
+    // Handle error (optional)
+    alert("Oops! Something went wrong. Please try again later.");
+    loader.style.display = 'none';  // Hide loader
+  });
+}
+
+  </script>
+</body>
+</html>
