@@ -1,0 +1,160 @@
+/* Custom CSS */
+    body {
+      font-family: "Roboto", serif;
+    }
+    .navbar {
+      background: #fefefe;
+    }
+    .nav-link:hover {
+      color: #7d2ae8 !important;
+    }
+    .navbar-toggler {
+      border: 0;
+    }
+    .navbar-toggler:hover,.navbar-toggler:active {
+      box-shadow: 0 0 0 3px rgba(125,42,232,0.5)
+    }
+    .hero-section {
+      background: linear-gradient(to right, #7d2ae8, #6f13e6);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: #fff;
+      border-radius: 25% 25% 0 0;
+      transform: translateY(50%);
+      z-index: -1;
+    }
+    .btn-hero {
+      background: #fefefe;
+      color: #7d2ae8;
+      transition: background 0.3s ease-in-out;
+    }
+    .btn-hero:hover,.btn-hero:active {
+      background: transparent;
+      color: #fefefe;
+      border: 1px solid #fefefe;
+    }
+    .rounded-circle {
+      border: 5px solid #7d2ae8;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+   /* Make progress bars look more modern */
+    .progress-bar {
+      background-color: #7d2ae8;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 0;
+      transition: width 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+    section#skills {
+      padding-top: 50px;
+    }
+    .btn-card {
+      background: #7d2ae8;
+      border: 1px solid #7d2ae8!important;
+      color: #fefefe;
+      transition: background,border,color 0.3s ease-in-out;
+    }
+    .btn-card:hover,.btn-card:active {
+      background: transparent !important;
+      color: #7d2ae8 !important;
+      border: 1px solid #7d2ae8 !important;
+    }
+    .footer {
+      background-color: #fefefe;
+      color: #333;
+      padding: 20px 0;
+    }
+    .footer .social-icons {
+      margin-top: 10px;
+    }
+    .footer .social-icons a {
+      color: #333;
+      margin: 0 10px;      
+      font-size: 20px;
+      text-decoration: none;
+      transition: transform,color 0.3s ease-in-out;
+    }
+    .footer a {
+      text-decoration: none;
+      color: #222;
+    }
+    .footer a:hover {
+      text-decoration: none;
+      color: #7d2ae8;
+    }
+    .footer .social-icons a:hover {
+      color: #7d2ae8;
+    }
+    h1 {
+      font-family: "Righteous", serif;
+      font-weight: 700;
+    }
+    .hero-section p {
+      font-family: "Roboto", serif !important;
+    }
+    .hero-section a {
+      font-family: "Poppins", serif;
+      font-weight: 600;
+    }
+    h2 {
+      color: #333 !important;
+      font-family: "Righteous", serif;
+    }
+    h5 {
+      color: #7d2ae8;
+      font-family: "Poppins", serif;
+    }
+    p {
+      font-family: "Poppins", serif !important;
+      font-weight: 400 !important;
+    }
+    #greeting {
+      color: #7d2ae8 !important;
+      font-weight: 500 !important;
+    }
+    .loader {
+  display: none;
+  border: 4px solid #ccc;
+  border-top: 4px solid #7d2ae8;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+    @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+     to {
+    transform: rotate(360deg);
+    }
+    }
+   .success-message {
+    font-family: "Roboto", serif;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade-in effect */
+    }
+   input,textarea {
+    transition: box-shadow 0.3s ease-in-out;
+    }
+   input:focus,textarea:focus {
+    box-shadow: 0 0 0 2px rgba(125,42,232,0.4) !important;
+    border: 1px solid rgba(125,42,232,0.4) !important;
+    outline: none;
+    }
