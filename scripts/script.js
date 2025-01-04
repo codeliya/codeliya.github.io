@@ -64,7 +64,13 @@ function degreesToRadians(degrees) {
   return degrees * (Math.PI / 180);
 }
 // Call Function on Page Load
-window.onload = getUserLocation;
+window.onload = function() {
+  getUserLocation();
+  setTimeout(function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none';
+  }, 3000);
+};
 
 
 function handleSubmit(event) {
@@ -98,10 +104,3 @@ function handleSubmit(event) {
     loader.style.display = 'none';  // Hide loader
   });
 }
-window.onload = function() {
-  // Set a 3 second delay to hide the preloader after page load
-  setTimeout(function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none'; // Hide preloader after 3 seconds
-  }, 3000); // 3000 milliseconds = 3 seconds
-};
