@@ -188,7 +188,7 @@ textarea:focus {
 }
 circle {
   fill: none;
-  stroke: var(--primary-color);
+  stroke: #7d2ae8;
   stroke-width: 4;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
