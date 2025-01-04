@@ -1,10 +1,4 @@
-window.onload = function() {
-  // Set a 3 second delay to hide the preloader after page load
-  setTimeout(function() {
-    const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none'; // Hide preloader after 3 seconds
-  }, 3000); // 3000 milliseconds = 3 seconds
-};
+
 document.addEventListener("DOMContentLoaded", function() {
     // Select all progress bars
     const progressBars = document.querySelectorAll('.progress-bar');
@@ -101,3 +95,10 @@ function handleSubmit(event) {
     loader.style.display = 'none';  // Hide loader
   });
 }
+window.onload = function() {
+  // Set a 3 second delay to hide the preloader after page load
+  setTimeout(function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.display = 'none'; // Hide preloader after 3 seconds
+  }, 3000); // 3000 milliseconds = 3 seconds
+};
