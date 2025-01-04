@@ -42,6 +42,7 @@ async function getUserLocation() {
     const greeting = `Hello I'm Mohammad from Prayagraj, India, roughly ${distance}km away from your current location ${userCity}, according to your IP address.`;
     document.getElementById("greeting").innerText = greeting;
   } catch (error) {
+    console.log(error);
     document.getElementById("greeting").innerText = "Hello I'm Mohammad from Prayagraj, India.";
   }
 }
@@ -64,6 +65,8 @@ function degreesToRadians(degrees) {
 }
 // Call Function on Page Load
 window.onload = getUserLocation;
+
+
 function handleSubmit(event) {
   event.preventDefault();  // Prevent default form submission
 
